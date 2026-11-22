@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Реакции ионного обмена для 9 класса. От молекулярного уравнения к ионному и задача с двумя пробирками.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Реакции ионного обмена · Химия по делу</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="practice.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+  <header class="site-header">
+    <div class="frame header-inner">
+      <a class="brand" href="./" aria-label="Химия по делу, главная">
+        <span class="brand-mark" aria-hidden="true">Х</span>
+        Химия по делу
+      </a>
+      <nav aria-label="Основная навигация">
+        <a class="nav-link" href="./#topics-title">Темы</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="frame lesson">
+    <header class="lesson-hero">
+      <p class="eyebrow">9 класс</p>
+      <h1>Реакции ионного обмена</h1>
+      <p class="lead">Научись предсказывать осадок и записывать, какие ионы образуют новое вещество.</p>
+      <nav class="lesson-links" aria-label="В этом уроке">
+        <a href="#theory">Объяснение</a>
+        <a href="#practice">Задание</a>
+        <a href="#sources">Источники</a>
+      </nav>
+    </header>
+
+    <section id="theory" class="lesson-section" aria-labelledby="theory-title">
+      <h2 id="theory-title">Что происходит в растворе</h2>
+      <p>Когда растворимая соль попадает в воду, её частицы расходятся в виде заряженных ионов. Например, в растворе поваренной соли есть ионы Na<sup>+</sup> и Cl<sup>−</sup>. Такой распад на ионы в воде называют <strong>электролитической диссоциацией</strong>.</p>
+      <p>При смешивании растворов некоторые ионы могут соединиться. В школьных задачах ищи один из трёх продуктов: <strong>осадок, газ или слабый электролит</strong>, например воду. Какую соль считать осадком, подскажет таблица растворимости.</p>
+
+      <div class="worked-example">
+        <h3>Пример с белым осадком</h3>
+        <p>Смешали растворы нитрата серебра и хлорида натрия. По таблице растворимости AgCl выпадает в осадок. Стрелка <strong>↓</strong> показывает осадок в уравнении.</p>
+        <ol class="equation-steps">
+          <li>
+            <strong>Запиши молекулярное уравнение</strong>
+            <p class="equation">AgNO<sub>3</sub> + NaCl → AgCl↓ + NaNO<sub>3</sub></p>
+          </li>
+          <li>
+            <strong>Распиши растворимые соли на ионы</strong>
+            <p class="equation">Ag<sup>+</sup> + NO<sub>3</sub><sup>−</sup> + Na<sup>+</sup> + Cl<sup>−</sup> → AgCl↓ + Na<sup>+</sup> + NO<sub>3</sub><sup>−</sup></p>
+            <p>Формулу твёрдого AgCl оставляем целиком.</p>
+          </li>
+          <li>
+            <strong>Убери одинаковые ионы с обеих сторон</strong>
+            <p class="equation">Ag<sup>+</sup> + Cl<sup>−</sup> → AgCl↓</p>
+            <p>Na<sup>+</sup> и NO<sub>3</sub><sup>−</sup> остались в растворе. Их называют ионами-наблюдателями.</p>
+          </li>
+        </ol>
+      </div>
+      <p class="takeaway"><strong>Самопроверка.</strong> В сокращённом уравнении слева и справа должно быть поровну атомов каждого элемента и одинаковый суммарный заряд.</p>
+    </section>
+
+    <section id="practice" class="lesson-section" aria-labelledby="practice-title">
+      <h2 id="practice-title">Задание. Две пробирки</h2>
+      <p>В школьной лаборатории перепутали этикетки. В одной пробирке раствор хлорида кальция CaCl<sub>2</sub>, в другой — хлорида натрия NaCl. Учитель добавил в обе раствор карбоната натрия Na<sub>2</sub>CO<sub>3</sub> и записал наблюдения.</p>
+      <dl class="observations">
+        <div>
+          <dt><span aria-hidden="true" class="sample cloudy"></span>Пробирка А</dt>
+          <dd>Появился белый осадок.</dd>
+        </div>
+        <div>
+          <dt><span aria-hidden="true" class="sample clear"></span>Пробирка Б</dt>
+          <dd>Раствор остался прозрачным.</dd>
+        </div>
+      </dl>
+
+      <details class="disclosure hint">
+        <summary>Подсказка из таблицы растворимости</summary>
+        <p>Карбонат кальция CaCO<sub>3</sub> практически нерастворим, а соли натрия из этого задания растворимы. В сокращённом уравнении слева оставь ионы, которые входят в состав осадка.</p>
+      </details>
+
+      <form id="exercise" class="exercise" hidden>
+        <fieldset data-correct="a" data-right="Да, хлорид кальция был в пробирке А. Ионы кальция образовали белый осадок." data-wrong="Ещё раз сравни наблюдения. Где ионы кальция могли образовать осадок?">
+          <legend>1. В какой пробирке был хлорид кальция?</legend>
+          <label class="option"><input type="radio" name="sample" value="a"><span>В пробирке А</span></label>
+          <label class="option"><input type="radio" name="sample" value="b"><span>В пробирке Б</span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <fieldset data-correct="carbonate" data-right="Верно. Ионы кальция и карбонат-ионы образуют CaCO₃. Суммарный заряд с обеих сторон равен нулю." data-wrong="Проверь, входит ли каждый выбранный ион в состав осадка. Ионы-наблюдатели в сокращённом уравнении убирают.">
+          <legend>2. Как выглядит сокращённое ионное уравнение?</legend>
+          <label class="option"><input type="radio" name="equation" value="chloride"><span class="formula">Ca<sup>2+</sup> + 2Cl<sup>−</sup> → CaCl<sub>2</sub>↓</span></label>
+          <label class="option"><input type="radio" name="equation" value="sodium"><span class="formula">2Na<sup>+</sup> + CO<sub>3</sub><sup>2−</sup> → Na<sub>2</sub>CO<sub>3</sub>↓</span></label>
+          <label class="option"><input type="radio" name="equation" value="carbonate"><span class="formula">Ca<sup>2+</sup> + CO<sub>3</sub><sup>2−</sup> → CaCO<sub>3</sub>↓</span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <div class="exercise-actions">
+          <button type="submit" class="button">Проверить ответы</button>
+          <button type="reset" class="button button-quiet" id="reset" hidden>Сбросить</button>
+        </div>
+        <p id="result" class="result" role="status" aria-atomic="true"></p>
+      </form>
+      <noscript>
+        <p>Определи, в какой пробирке был хлорид кальция. Запиши сокращённое ионное уравнение и сравни с разбором.</p>
+      </noscript>
+
+      <p class="notebook"><strong>В тетради.</strong> Запиши молекулярное и полное ионное уравнения. Подчеркни ионы-наблюдатели, затем сравни с разбором.</p>
+      <details id="solution" class="disclosure solution">
+        <summary>Разбор задания</summary>
+        <div class="solution-body">
+          <p>В пробирке А был CaCl<sub>2</sub>. Ионы Ca<sup>2+</sup> встретились с ионами CO<sub>3</sub><sup>2−</sup>, и образовался белый осадок CaCO<sub>3</sub>. В пробирке Б все ионы остались в растворе.</p>
+          <dl class="solution-equations">
+            <dt>Молекулярное</dt>
+            <dd class="equation">CaCl<sub>2</sub> + Na<sub>2</sub>CO<sub>3</sub> → CaCO<sub>3</sub>↓ + 2NaCl</dd>
+            <dt>Полное ионное</dt>
+            <dd class="equation">Ca<sup>2+</sup> + <s>2Cl<sup>−</sup></s> + <s>2Na<sup>+</sup></s> + CO<sub>3</sub><sup>2−</sup> → CaCO<sub>3</sub>↓ + <s>2Na<sup>+</sup></s> + <s>2Cl<sup>−</sup></s></dd>
+            <dt>Сокращённое ионное</dt>
+            <dd class="equation">Ca<sup>2+</sup> + CO<sub>3</sub><sup>2−</sup> → CaCO<sub>3</sub>↓</dd>
+          </dl>
+          <p>Карбонат кальция встречается и в быту. Например, он может входить в состав накипи в чайнике.</p>
+        </div>
+      </details>
+    </section>
+
+    <section id="sources" class="lesson-section sources" aria-labelledby="sources-title">
+      <h2 id="sources-title">Источники</h2>
+      <ul>
+        <li><a href="https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf#page=37">Федеральная рабочая программа по химии для 8–9 классов</a><span>Тема и школьные требования к ионным уравнениям.</span></li>
+        <li><a href="https://edsoo.ru/wp-content/uploads/2023/10/metodicheskoe-posobie.-himiya.pdf#page=34">Методические рекомендации Института стратегии развития образования</a><span>Задачи по наблюдениям и оформление выводов. С. 34–36.</span></li>
+        <li><a href="https://openstax.org/books/chemistry/pages/18-6-occurrence-preparation-and-properties-of-carbonates">OpenStax Chemistry, § 18.6</a><span>Свойства карбонатов и образование осадка CaCO<sub>3</sub>.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="frame site-footer">
+    <span>Химия по делу</span>
+    <a href="./#topics-title">Все темы</a>
+  </footer>
+</body>
+</html>
