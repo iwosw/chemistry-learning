@@ -42,7 +42,7 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner { min-height: 4.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .brand { display: inline-flex; align-items: center; gap: .7rem; font-weight: 650; color: var(--ink); text-decoration: none; }
-.brand-mark { display: grid; place-items: center; width: 2rem; height: 2rem; background: var(--accent); color: white; border-radius: .5rem; font: 500 1.3rem/1 var(--serif); }
+.brand-mark { display: block; width: 2.25rem; height: 2.25rem; flex: none; }
 .nav-link { display: inline-block; padding: .45rem .85rem; border-radius: .5rem; color: var(--muted); font-size: .9375rem; text-decoration: none; }
 .nav-link:hover, .nav-link[aria-current] { color: var(--accent-dark); background: var(--wash); }
 
@@ -81,39 +81,37 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .hero-figure figcaption { margin-top: .75rem; color: var(--muted); text-align: center; font-size: .875rem; }
 .ion-diagram {
   display: grid;
-  justify-items: center;
-  gap: .35rem;
-  padding: clamp(1rem, 3.5vw, 2rem) 1rem;
+  gap: .875rem;
+  padding: clamp(.85rem, 3vw, 1.65rem);
   border-radius: 1rem;
   border: 1px solid #e3d9ef;
   background-color: #eee7f6;
   background-image: radial-gradient(#aa98c580 1px, transparent 1px), radial-gradient(ellipse at 55% 27%, #fbf9ff, transparent 72%);
   background-size: 15px 15px, 100% 100%;
 }
-.diagram-reactants, .diagram-spectators {
+.diagram-block {
   display: grid;
-  align-items: center;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: .6rem;
-  width: min(100%, 11rem);
+  justify-items: center;
+  gap: .45rem;
+  padding: .65rem .5rem;
+  border-radius: .65rem;
+  border: 1px solid #dcd0eb;
+  background: #fffcffdd;
   text-align: center;
-  color: var(--accent);
 }
-.diagram-reactants { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
-.diagram-arrow { color: var(--accent); font-size: 1.25rem; line-height: 1.2; }
-.diagram-ion, .diagram-product {
-  padding: .3em .5em;
-  border: 1px solid #d1c1e3;
+.diagram-label { color: var(--muted); font-size: .875rem; }
+.diagram-equation { display: grid; grid-template-columns: 3.7rem 1.25rem 6.2rem; align-items: baseline; gap: .25rem; text-align: left; }
+.diagram-equation strong { text-align: right; }
+.diagram-equation > :nth-child(2) { text-align: center; }
+.diagram-equation, .diagram-reaction { color: var(--accent-dark); font-weight: 600; }
+.diagram-product {
+  display: inline-block;
+  padding: .12em .6em;
   border-radius: 99px;
-  background: #f7f2ff;
-  color: #513b78;
-  text-align: center;
+  background: var(--accent);
+  color: white;
   white-space: nowrap;
-  font: 600 1rem/1.4 var(--sans);
 }
-.diagram-product { min-width: 5rem; background: var(--accent); border-color: var(--accent); color: white; }
-.diagram-spectators { margin-top: .65rem; padding-top: .55rem; border-top: 1px solid #d1c1e3; }
-.diagram-spectators > :first-child { grid-column: 1 / -1; font-size: .875rem; }
 
 .topic-section { margin-top: clamp(2rem, 6vw, 3.5rem); }
 .topic-list { padding: 0; margin: 1rem 0 0; list-style: none; }
