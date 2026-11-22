@@ -80,38 +80,40 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .hero-figure { width: 100%; max-width: 23rem; justify-self: center; }
 .hero-figure figcaption { margin-top: .75rem; color: var(--muted); text-align: center; font-size: .875rem; }
 .ion-diagram {
-  position: relative;
-  isolation: isolate;
-  width: 100%;
-  aspect-ratio: 1.25;
-  overflow: hidden;
+  display: grid;
+  justify-items: center;
+  gap: .35rem;
+  padding: clamp(1rem, 3.5vw, 2rem) 1rem;
   border-radius: 1rem;
   border: 1px solid #e3d9ef;
   background-color: #eee7f6;
   background-image: radial-gradient(#aa98c580 1px, transparent 1px), radial-gradient(ellipse at 55% 27%, #fbf9ff, transparent 72%);
   background-size: 15px 15px, 100% 100%;
 }
-.orbit { position: absolute; z-index: -1; border: 1px solid #d0c1e3; border-radius: 50%; transform: translate(-50%, -50%); left: 50%; top: 47%; }
-.orbit-outer { width: 71%; height: 72%; }
-.orbit-inner { width: 47%; height: 49%; }
+.diagram-reactants, .diagram-spectators {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .6rem;
+  width: min(100%, 11rem);
+  text-align: center;
+  color: var(--accent);
+}
+.diagram-reactants { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+.diagram-arrow { color: var(--accent); font-size: 1.25rem; line-height: 1.2; }
 .diagram-ion, .diagram-product {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  padding: .3em .65em;
+  padding: .3em .5em;
   border: 1px solid #d1c1e3;
   border-radius: 99px;
   background: #f7f2ff;
   color: #513b78;
   text-align: center;
   white-space: nowrap;
-  font: 500 clamp(.9rem, 2vw, 1.15rem)/1.4 var(--sans);
-  box-shadow: 0 3px 12px #4c326c13;
+  font: 600 1rem/1.4 var(--sans);
 }
-.ion-silver { left: 34%; top: 35%; }
-.ion-chloride { left: 66%; top: 35%; }
-.ion-sodium { left: 20%; top: 67%; }
-.ion-nitrate { left: 80%; top: 67%; }
-.diagram-product { left: 50%; top: 63%; background: var(--accent); border-color: var(--accent); color: white; }
+.diagram-product { min-width: 5rem; background: var(--accent); border-color: var(--accent); color: white; }
+.diagram-spectators { margin-top: .65rem; padding-top: .55rem; border-top: 1px solid #d1c1e3; }
+.diagram-spectators > :first-child { grid-column: 1 / -1; font-size: .875rem; }
 
 .topic-section { margin-top: clamp(2rem, 6vw, 3.5rem); }
 .topic-list { padding: 0; margin: 1rem 0 0; list-style: none; }
@@ -142,7 +144,11 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .lesson-links a { padding: .35rem .7rem; border: 1px solid var(--line); border-radius: .45rem; background: var(--surface); font-size: .875rem; text-decoration: none; }
 .lesson-links a:hover { background: var(--wash); }
 .lesson-section { margin-top: 2.7rem; scroll-margin-top: 1.5rem; }
-.lesson-section > p { margin-top: .8rem; }
+.lesson-section > p, .practice-task > p { margin-top: .8rem; }
+.practice-task { margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); scroll-margin-top: 1.5rem; }
+.practice-task + .practice-task { margin-top: 2.5rem; }
+.practice-task h3 { font: 500 clamp(1.4rem, 4vw, 1.85rem)/1.2 var(--serif); letter-spacing: -.02em; }
+.practice-task > .hint { margin-top: 1rem; }
 .worked-example { margin-top: 1.25rem; padding: clamp(1rem, 4vw, 1.65rem); background: var(--surface); border: 1px solid var(--line); border-radius: .95rem; }
 .worked-example > p { margin-top: .4rem; }
 .equation-steps { margin: 1.1rem 0 0; padding-left: 1.45rem; }
@@ -167,13 +173,15 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
 .option { display: flex; align-items: baseline; gap: .7rem; min-height: 2.75rem; padding: .5rem .7rem; margin-bottom: .35rem; border-radius: .5rem; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
 .option:hover, .option:has(:checked) { border-color: #a58fbe; background: #f2edf8; }
 .option input { flex: none; margin: 0; accent-color: var(--accent); }
+.coefficient { display: inline-flex; align-items: center; gap: .6rem; margin-top: .4rem; }
+.coefficient input { width: 4rem; min-height: 2.75rem; padding: .4rem .55rem; border: 1px solid #a58fbe; border-radius: .5rem; background: var(--surface); color: var(--ink); }
 .field-feedback { margin-top: .35rem; color: #805022; }
 .field-feedback.is-right, .result.is-right { color: #2f624c; }
 .exercise-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
 .button-quiet { background: transparent; color: var(--accent); border-color: var(--line); }
 .button-quiet:hover { background: var(--wash); color: var(--accent-dark); }
 .result { margin-top: .45rem; font-weight: 650; }
-.lesson-section > .notebook { margin-top: 1.35rem; }
+.practice-task > .notebook { margin-top: 1.35rem; }
 .solution { margin-top: .75rem; }
 .solution-body { padding: 0 .9rem 1rem; }
 .solution-equations { margin-block: .8rem; }
@@ -189,7 +197,6 @@ h3 { font-size: 1.125rem; line-height: 1.35; }
   .header-inner { min-height: 4rem; }
   .hero { grid-template-columns: 1fr; gap: 1.65rem; }
   .hero-figure { justify-self: start; }
-  .ion-diagram { aspect-ratio: 1.75; }
   .topic-card { grid-template-columns: auto minmax(0, 1fr) auto; gap: .75rem; padding: .85rem; }
   .topic-meta { grid-column: 2; grid-row: 2; }
   .topic-chevron { grid-column: 3; grid-row: 1 / 3; }

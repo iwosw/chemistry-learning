@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Реакции ионного обмена для 9 класса. От молекулярного уравнения к ионному и задача с двумя пробирками.">
+  <meta name="description" content="Реакции ионного обмена для 9 класса. Краткое объяснение и четыре школьных задания с проверкой и разбором.">
   <meta name="theme-color" content="#f7f6f2">
   <title>Реакции ионного обмена · Химия по делу</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="practice.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=2">
+  <script src="practice.js?v=2" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
@@ -27,10 +27,10 @@
     <header class="lesson-hero">
       <p class="eyebrow">9 класс</p>
       <h1>Реакции ионного обмена</h1>
-      <p class="lead">Научись предсказывать осадок и записывать, какие ионы образуют новое вещество.</p>
+      <p class="lead">Научись определять, когда идёт реакция, и записывать её сокращённое ионное уравнение.</p>
       <nav class="lesson-links" aria-label="В этом уроке">
         <a href="#theory">Объяснение</a>
-        <a href="#practice">Задание</a>
+        <a href="#practice">Задания</a>
         <a href="#sources">Источники</a>
       </nav>
     </header>
@@ -64,7 +64,17 @@
     </section>
 
     <section id="practice" class="lesson-section" aria-labelledby="practice-title">
-      <h2 id="practice-title">Задание. Две пробирки</h2>
+      <h2 id="practice-title">Задания</h2>
+      <nav class="lesson-links" aria-label="Список заданий">
+        <a href="#precipitate">Две пробирки</a>
+        <a href="#gas">Пузырьки газа</a>
+        <a href="#neutralization">Нейтрализация</a>
+        <a href="#mixture">Реакция или смесь?</a>
+      </nav>
+    </section>
+
+    <section id="precipitate" class="practice-task" aria-labelledby="precipitate-title">
+      <h3 id="precipitate-title">Две пробирки</h3>
       <p>В школьной лаборатории перепутали этикетки. В одной пробирке раствор хлорида кальция CaCl<sub>2</sub>, в другой — хлорида натрия NaCl. Учитель добавил в обе раствор карбоната натрия Na<sub>2</sub>CO<sub>3</sub> и записал наблюдения.</p>
       <dl class="observations">
         <div>
@@ -82,7 +92,7 @@
         <p>Карбонат кальция CaCO<sub>3</sub> практически нерастворим, а соли натрия из этого задания растворимы. В сокращённом уравнении слева оставь ионы, которые входят в состав осадка.</p>
       </details>
 
-      <form id="exercise" class="exercise" hidden>
+      <form class="exercise" aria-labelledby="precipitate-title" hidden>
         <fieldset data-correct="a" data-right="Да, хлорид кальция был в пробирке А. Ионы кальция образовали белый осадок." data-wrong="Ещё раз сравни наблюдения. Где ионы кальция могли образовать осадок?">
           <legend>1. В какой пробирке был хлорид кальция?</legend>
           <label class="option"><input type="radio" name="sample" value="a"><span>В пробирке А</span></label>
@@ -100,9 +110,9 @@
 
         <div class="exercise-actions">
           <button type="submit" class="button">Проверить ответы</button>
-          <button type="reset" class="button button-quiet" id="reset" hidden>Сбросить</button>
+          <button type="reset" class="button button-quiet" hidden>Сбросить</button>
         </div>
-        <p id="result" class="result" role="status" aria-atomic="true"></p>
+        <p class="result" role="status" aria-atomic="true"></p>
       </form>
       <noscript>
         <p>Определи, в какой пробирке был хлорид кальция. Запиши сокращённое ионное уравнение и сравни с разбором.</p>
@@ -126,12 +136,158 @@
       </details>
     </section>
 
+    <section id="gas" class="practice-task" aria-labelledby="gas-title">
+      <h3 id="gas-title">Пузырьки газа</h3>
+      <p>В журнале наблюдений записано: «При смешивании растворов карбоната натрия Na<sub>2</sub>CO<sub>3</sub> и соляной кислоты HCl появились пузырьки». Восстанови запись для отчёта.</p>
+
+      <details class="disclosure hint">
+        <summary>Подсказка про карбонаты</summary>
+        <p>При взаимодействии карбоната с кислотой образуется угольная кислота H<sub>2</sub>CO<sub>3</sub>. Она распадается на воду и газ. Сравни состав H<sub>2</sub>CO<sub>3</sub> и H<sub>2</sub>O.</p>
+      </details>
+
+      <form class="exercise" aria-labelledby="gas-title" hidden>
+        <fieldset data-correct="co2" data-right="Верно, в пузырьках углекислый газ CO₂." data-wrong="Подумай, в какую молекулу попадает углерод из карбонат-иона.">
+          <legend>1. Какой газ выделился?</legend>
+          <label class="option"><input type="radio" name="gas" value="h2"><span>Водород H<sub>2</sub></span></label>
+          <label class="option"><input type="radio" name="gas" value="co2"><span>Углекислый газ CO<sub>2</sub></span></label>
+          <label class="option"><input type="radio" name="gas" value="o2"><span>Кислород O<sub>2</sub></span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <fieldset data-correct="2" data-right="Верно. Два иона H⁺ компенсируют заряд −2 карбонат-иона и дают два атома водорода для воды." data-wrong="Заряд CO₃²⁻ равен −2. Сколько ионов с зарядом +1 нужно, чтобы суммарный заряд стал нулём?">
+          <legend>2. Какой коэффициент стоит перед H<sup>+</sup>?</legend>
+          <p class="equation">□ H<sup>+</sup> + CO<sub>3</sub><sup>2−</sup> → H<sub>2</sub>O + CO<sub>2</sub>↑</p>
+          <label class="coefficient">Коэффициент <input type="text" name="coefficient" inputmode="numeric" autocomplete="off" maxlength="2"></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <div class="exercise-actions">
+          <button type="submit" class="button">Проверить ответы</button>
+          <button type="reset" class="button button-quiet" hidden>Сбросить</button>
+        </div>
+        <p class="result" role="status" aria-atomic="true"></p>
+      </form>
+      <noscript><p>Назови газ и подбери коэффициент перед H<sup>+</sup> для реакции с одним CO<sub>3</sub><sup>2−</sup>.</p></noscript>
+
+      <p class="notebook"><strong>В тетради.</strong> Запиши реакцию в трёх видах. Отметь газ стрелкой ↑.</p>
+      <details class="disclosure solution">
+        <summary>Разбор задания</summary>
+        <div class="solution-body">
+          <p>Один карбонат-ион связывает два иона H<sup>+</sup>. Образовавшаяся угольная кислота распадается на воду и углекислый газ.</p>
+          <dl class="solution-equations">
+            <dt>Молекулярное</dt>
+            <dd class="equation">Na<sub>2</sub>CO<sub>3</sub> + 2HCl → 2NaCl + H<sub>2</sub>O + CO<sub>2</sub>↑</dd>
+            <dt>Полное ионное</dt>
+            <dd class="equation"><s>2Na<sup>+</sup></s> + CO<sub>3</sub><sup>2−</sup> + 2H<sup>+</sup> + <s>2Cl<sup>−</sup></s> → <s>2Na<sup>+</sup></s> + <s>2Cl<sup>−</sup></s> + H<sub>2</sub>O + CO<sub>2</sub>↑</dd>
+            <dt>Сокращённое ионное</dt>
+            <dd class="equation">2H<sup>+</sup> + CO<sub>3</sub><sup>2−</sup> → H<sub>2</sub>O + CO<sub>2</sub>↑</dd>
+          </dl>
+        </div>
+      </details>
+    </section>
+
+    <section id="neutralization" class="practice-task" aria-labelledby="neutralization-title">
+      <h3 id="neutralization-title">Нейтрализация</h3>
+      <p>На уроке учитель смешал растворы соляной кислоты HCl и гидроксида калия KOH. Универсальный индикатор стал зелёным, что указывает на среду, близкую к нейтральной. Объясни это наблюдение на уровне ионов.</p>
+
+      <details class="disclosure hint">
+        <summary>Подсказка про индикатор</summary>
+        <p>Кислая среда связана с избытком H<sup>+</sup>, а щелочная — с избытком OH<sup>−</sup>. Вспомни, что образуется, когда эти ионы соединяются.</p>
+      </details>
+
+      <form class="exercise" aria-labelledby="neutralization-title" hidden>
+        <fieldset data-correct="water" data-right="Да. Ионы H⁺ и OH⁻ соединяются в молекулы воды." data-wrong="Найди пару из иона кислоты и иона щёлочи, из которых может образоваться вода.">
+          <legend>1. Какие ионы участвуют в сокращённом уравнении?</legend>
+          <label class="option"><input type="radio" name="ions" value="water"><span>H<sup>+</sup> и OH<sup>−</sup></span></label>
+          <label class="option"><input type="radio" name="ions" value="salt"><span>K<sup>+</sup> и Cl<sup>−</sup></span></label>
+          <label class="option"><input type="radio" name="ions" value="acid"><span>H<sup>+</sup> и Cl<sup>−</sup></span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <fieldset data-correct="water" data-right="Верно. Образование воды, слабого электролита, объясняет, почему идёт реакция обмена." data-wrong="Хлорид калия остаётся в растворе. Посмотри, какое вещество образуют H⁺ и OH⁻.">
+          <legend>2. Какой продукт объясняет протекание обмена?</legend>
+          <label class="option"><input type="radio" name="product" value="solid"><span>Осадок хлорида калия</span></label>
+          <label class="option"><input type="radio" name="product" value="gas"><span>Газообразный водород</span></label>
+          <label class="option"><input type="radio" name="product" value="water"><span>Вода</span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <div class="exercise-actions">
+          <button type="submit" class="button">Проверить ответы</button>
+          <button type="reset" class="button button-quiet" hidden>Сбросить</button>
+        </div>
+        <p class="result" role="status" aria-atomic="true"></p>
+      </form>
+      <noscript><p>Определи, какие ионы реагируют и что образуется при их соединении.</p></noscript>
+
+      <p class="notebook"><strong>В тетради.</strong> Составь сокращённое ионное уравнение и назови ионы-наблюдатели.</p>
+      <details class="disclosure solution">
+        <summary>Разбор задания</summary>
+        <div class="solution-body">
+          <p>Ионы H<sup>+</sup> и OH<sup>−</sup> образуют воду. При смешивании равных количеств HCl и KOH избытка кислоты или щёлочи в растворе не остаётся. Ионы K<sup>+</sup> и Cl<sup>−</sup> сохраняются в растворе.</p>
+          <dl class="solution-equations">
+            <dt>Молекулярное</dt>
+            <dd class="equation">HCl + KOH → KCl + H<sub>2</sub>O</dd>
+            <dt>Полное ионное</dt>
+            <dd class="equation">H<sup>+</sup> + <s>Cl<sup>−</sup></s> + <s>K<sup>+</sup></s> + OH<sup>−</sup> → <s>K<sup>+</sup></s> + <s>Cl<sup>−</sup></s> + H<sub>2</sub>O</dd>
+            <dt>Сокращённое ионное</dt>
+            <dd class="equation">H<sup>+</sup> + OH<sup>−</sup> → H<sub>2</sub>O</dd>
+          </dl>
+        </div>
+      </details>
+    </section>
+
+    <section id="mixture" class="practice-task" aria-labelledby="mixture-title">
+      <h3 id="mixture-title">Реакция или смесь?</h3>
+      <p>В черновике лабораторной работы ученик написал, что при смешивании растворов нитрата натрия NaNO<sub>3</sub> и хлорида калия KCl выпадает NaCl. Проверь его вывод по таблице растворимости.</p>
+
+      <details class="disclosure hint">
+        <summary>Подсказка из таблицы растворимости</summary>
+        <p>Предполагаемые продукты обмена — хлорид натрия NaCl и нитрат калия KNO<sub>3</sub>. Обе соли растворимы в воде.</p>
+      </details>
+
+      <form class="exercise" aria-labelledby="mixture-title" hidden>
+        <fieldset data-correct="clear" data-right="Да. Обе соли растворимы, и в обычных условиях смесь остаётся прозрачной." data-wrong="Проверь растворимость NaCl и KNO₃. Из этих ионов газ тоже не образуется.">
+          <legend>1. Что ожидается при смешивании разбавленных растворов?</legend>
+          <label class="option"><input type="radio" name="observation" value="solid"><span>Выпадет осадок NaCl</span></label>
+          <label class="option"><input type="radio" name="observation" value="clear"><span>Смесь останется прозрачной, без осадка и пузырьков</span></label>
+          <label class="option"><input type="radio" name="observation" value="gas"><span>Выделится углекислый газ</span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <fieldset data-correct="same" data-right="Верно. Все четыре вида ионов остаются в растворе, сокращённого ионного уравнения нет." data-wrong="Выпиши ионы каждой из четырёх растворимых солей. Какие ионы есть с обеих сторон записи?">
+          <legend>2. Что получится, если расписать все соли на ионы?</legend>
+          <label class="option"><input type="radio" name="ions" value="same"><span>Набор ионов с обеих сторон одинаковый</span></label>
+          <label class="option"><input type="radio" name="ions" value="sodium"><span>Из раствора исчезнут Na<sup>+</sup> и Cl<sup>−</sup></span></label>
+          <label class="option"><input type="radio" name="ions" value="potassium"><span>Из раствора исчезнут K<sup>+</sup> и NO<sub>3</sub><sup>−</sup></span></label>
+          <p class="field-feedback" hidden></p>
+        </fieldset>
+
+        <div class="exercise-actions">
+          <button type="submit" class="button">Проверить ответы</button>
+          <button type="reset" class="button button-quiet" hidden>Сбросить</button>
+        </div>
+        <p class="result" role="status" aria-atomic="true"></p>
+      </form>
+      <noscript><p>Предскажи результат смешивания. Выпиши ионы до и после смешивания и сравни их.</p></noscript>
+
+      <details class="disclosure solution">
+        <summary>Разбор задания</summary>
+        <div class="solution-body">
+          <p>В обоих растворах соли диссоциируют. После смешивания остаются те же четыре вида ионов:</p>
+          <p class="equation">Na<sup>+</sup>, NO<sub>3</sub><sup>−</sup>, K<sup>+</sup>, Cl<sup>−</sup></p>
+          <p>Осадок, газ или слабый электролит не образуются. Все ионы сократились бы, поэтому ионного уравнения реакции нет. Сам по себе прозрачный раствор ничего не доказывает: при нейтрализации он тоже может остаться прозрачным.</p>
+        </div>
+      </details>
+    </section>
+
     <section id="sources" class="lesson-section sources" aria-labelledby="sources-title">
       <h2 id="sources-title">Источники</h2>
       <ul>
-        <li><a href="https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf#page=37">Федеральная рабочая программа по химии для 8–9 классов</a><span>Тема и школьные требования к ионным уравнениям.</span></li>
+        <li><a href="https://edsoo.ru/wp-content/uploads/2025/07/2025_ooo_frp_himiya_8-9_baza.pdf#page=9">Федеральная рабочая программа по химии для 8–9 классов</a><span>Реакции ионного обмена в разделе «Содержание обучения. 9 класс», с. 9–10.</span></li>
         <li><a href="https://edsoo.ru/wp-content/uploads/2023/10/metodicheskoe-posobie.-himiya.pdf#page=34">Методические рекомендации Института стратегии развития образования</a><span>Задачи по наблюдениям и оформление выводов. С. 34–36.</span></li>
         <li><a href="https://openstax.org/books/chemistry/pages/18-6-occurrence-preparation-and-properties-of-carbonates">OpenStax Chemistry, § 18.6</a><span>Свойства карбонатов и образование осадка CaCO<sub>3</sub>.</span></li>
+        <li><a href="https://openstax.org/books/chemistry-2e/pages/4-2-classifying-chemical-reactions">OpenStax Chemistry 2e, § 4.2</a><span>Таблица растворимости и примеры реакций нейтрализации.</span></li>
       </ul>
     </section>
   </main>
